@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\testng.xml</span>
+                    <span>C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,46 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">9 methods,  6 skipped,  3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_04_Logout_User">tc_04_Logout_User</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_05_Register_User_with_existing_email">tc_05_Register_User_with_existing_email</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_10_Verify_Subscription_in_Home_Page">tc_10_Verify_Subscription_in_Home_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_11_Verify_Subscription_in_Cart_Page">tc_11_Verify_Subscription_in_Cart_Page</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality">tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality">tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +142,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="regression.DemoGuruTestCases" class="method navigator-link" hash-for-method="tc_01_Register">tc_01_Register</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_01_Register_User">tc_01_Register_User</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="regression.DemoGuruTestCases" class="method navigator-link" hash-for-method="tc_02_Login">tc_02_Login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_02_Login_User_with_correct_email_and_password">tc_02_Login_User_with_correct_email_and_password</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="regression.DemoGuruTestCases" class="method navigator-link" hash-for-method="tc_03_Reservation">tc_03_Reservation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="regression.AutomationExerciseTestCases" class="method navigator-link" hash-for-method="tc_03_Login_User_with_incorrect_email_and_password">tc_03_Login_User_with_incorrect_email_and_password</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -128,31 +167,231 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">regression.DemoGuruTestCases</span>
+              <img src="skipped.png"/>
+              <span class="class-name">regression.AutomationExerciseTestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="tc_01_Register">
-                  </a> <!-- tc_01_Register -->
-                  <span class="method-name">tc_01_Register</span>
+                  <a name="tc_04_Logout_User">
+                  </a> <!-- tc_04_Logout_User -->
+                  <span class="method-name">tc_04_Logout_User</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.156)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21d1fcf461e8cd5e6b5111a4a296226a, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\RYZEN5~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62933}, goog:processID: 10632, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62933/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21d1fcf461e8cd5e6b5111a4a296226a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at base.BaseTest.captureScreenshot(BaseTest.java:256)
+	at base.BaseTest.afterMethod(BaseTest.java:102)
+	at regression.AutomationExerciseTestCases.afterMethod(AutomationExerciseTestCases.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="tc_02_Login">
-                  </a> <!-- tc_02_Login -->
-                  <span class="method-name">tc_02_Login</span>
+                  <a name="tc_05_Register_User_with_existing_email">
+                  </a> <!-- tc_05_Register_User_with_existing_email -->
+                  <span class="method-name">tc_05_Register_User_with_existing_email</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.156)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21d1fcf461e8cd5e6b5111a4a296226a, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\RYZEN5~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62933}, goog:processID: 10632, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62933/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21d1fcf461e8cd5e6b5111a4a296226a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at base.BaseTest.captureScreenshot(BaseTest.java:256)
+	at base.BaseTest.afterMethod(BaseTest.java:102)
+	at regression.AutomationExerciseTestCases.afterMethod(AutomationExerciseTestCases.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="tc_03_Reservation">
-                  </a> <!-- tc_03_Reservation -->
-                  <span class="method-name">tc_03_Reservation</span>
+                  <a name="tc_10_Verify_Subscription_in_Home_Page">
+                  </a> <!-- tc_10_Verify_Subscription_in_Home_Page -->
+                  <span class="method-name">tc_10_Verify_Subscription_in_Home_Page</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.156)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21d1fcf461e8cd5e6b5111a4a296226a, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\RYZEN5~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62933}, goog:processID: 10632, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62933/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21d1fcf461e8cd5e6b5111a4a296226a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at base.BaseTest.captureScreenshot(BaseTest.java:256)
+	at base.BaseTest.afterMethod(BaseTest.java:102)
+	at regression.AutomationExerciseTestCases.afterMethod(AutomationExerciseTestCases.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc_11_Verify_Subscription_in_Cart_Page">
+                  </a> <!-- tc_11_Verify_Subscription_in_Cart_Page -->
+                  <span class="method-name">tc_11_Verify_Subscription_in_Cart_Page</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.156)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [acf9a3aedf81b3d1414589025cb60f22, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\RYZEN5~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51546}, goog:processID: 15648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51546/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: acf9a3aedf81b3d1414589025cb60f22
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at base.BaseTest.captureScreenshot(BaseTest.java:256)
+	at base.BaseTest.afterMethod(BaseTest.java:102)
+	at regression.AutomationExerciseTestCases.afterMethod(AutomationExerciseTestCases.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality">
+                  </a> <!-- tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality -->
+                  <span class="method-name">tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.156)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [acf9a3aedf81b3d1414589025cb60f22, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\RYZEN5~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51546}, goog:processID: 15648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51546/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: acf9a3aedf81b3d1414589025cb60f22
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at base.BaseTest.captureScreenshot(BaseTest.java:256)
+	at base.BaseTest.afterMethod(BaseTest.java:102)
+	at regression.AutomationExerciseTestCases.afterMethod(AutomationExerciseTestCases.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality">
+                  </a> <!-- tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality -->
+                  <span class="method-name">tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.156)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [acf9a3aedf81b3d1414589025cb60f22, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.156, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\RYZEN5~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51546}, goog:processID: 15648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51546/devtoo..., se:cdpVersion: 149.0.7827.156, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: acf9a3aedf81b3d1414589025cb60f22
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at base.BaseTest.captureScreenshot(BaseTest.java:256)
+	at base.BaseTest.afterMethod(BaseTest.java:102)
+	at regression.AutomationExerciseTestCases.afterMethod(AutomationExerciseTestCases.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">regression.AutomationExerciseTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc_01_Register_User">
+                  </a> <!-- tc_01_Register_User -->
+                  <span class="method-name">tc_01_Register_User</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc_02_Login_User_with_correct_email_and_password">
+                  </a> <!-- tc_02_Login_User_with_correct_email_and_password -->
+                  <span class="method-name">tc_02_Login_User_with_correct_email_and_password</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc_03_Login_User_with_incorrect_email_and_password">
+                  </a> <!-- tc_03_Login_User_with_incorrect_email_and_password -->
+                  <span class="method-name">tc_03_Login_User_with_incorrect_email_and_password</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -160,17 +399,20 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\testng.xml</span>
+            <span class="header-content">C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;chrome-headless&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;${browser}&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utils.SuiteListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;regression.DemoGuruTestCases&quot;/&gt;
+      &lt;class name=&quot;regression.AutomationExerciseTestCases&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -210,24 +452,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'tc_01_Register')
-data.setCell(0, 2, 'regression.DemoGuruTestCases')
-data.setCell(0, 3, 5424);
+data.setCell(0, 1, 'tc_02_Login_User_with_correct_email_and_password')
+data.setCell(0, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(0, 3, 282556);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'tc_03_Reservation')
-data.setCell(1, 2, 'regression.DemoGuruTestCases')
-data.setCell(1, 3, 2060);
+data.setCell(1, 1, 'tc_01_Register_User')
+data.setCell(1, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(1, 3, 203560);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'tc_02_Login')
-data.setCell(2, 2, 'regression.DemoGuruTestCases')
-data.setCell(2, 3, 1921);
+data.setCell(2, 1, 'tc_03_Login_User_with_incorrect_email_and_password')
+data.setCell(2, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(2, 3, 193262);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'tc_10_Verify_Subscription_in_Home_Page')
+data.setCell(3, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(3, 3, 0);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'tc_11_Verify_Subscription_in_Cart_Page')
+data.setCell(4, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality')
+data.setCell(5, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality')
+data.setCell(6, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(6, 3, 0);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'tc_04_Logout_User')
+data.setCell(7, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(7, 3, 0);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'tc_05_Register_User_with_existing_email')
+data.setCell(8, 2, 'regression.AutomationExerciseTestCases')
+data.setCell(8, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 11 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -253,50 +519,136 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">regression.DemoGuruTestCases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">regression.AutomationExerciseTestCases</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">prepareReport(chrome-headless)</span>
+                <span class="method-name">prepareReport(${browser})</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">setup(public void regression.DemoGuruTestCases.tc_01_Register())</span>
-                <span class="method-start">226 ms</span>
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_01_Register_User())</span>
+                <span class="method-start">545 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">tc_01_Register</span>
-                <span class="method-start">4769 ms</span>
+                <span class="method-name">tc_01_Register_User</span>
+                <span class="method-start">5782 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=tc_01_Register status=SUCCESS method=DemoGuruTestCases.tc_01_Register()[pri:1, inst...)</span>
-                <span class="method-start">10196 ms</span>
+                <span class="method-name">afterMethod([TestResult name=tc_01_Register_User status=SUCCESS method=AutomationExerciseTestCases.tc_01_Registe...)</span>
+                <span class="method-start">209347 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setup(public void regression.DemoGuruTestCases.tc_02_Login())</span>
-                <span class="method-start">10830 ms</span>
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_02_Login_User_with_correct_email_and_password(...)</span>
+                <span class="method-start">210422 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">tc_02_Login</span>
-                <span class="method-start">14595 ms</span>
+                <span class="method-name">tc_02_Login_User_with_correct_email_and_password</span>
+                <span class="method-start">235041 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=tc_02_Login status=SUCCESS method=DemoGuruTestCases.tc_02_Login()[pri:2, instance:r...)</span>
-                <span class="method-start">16517 ms</span>
+                <span class="method-name">afterMethod([TestResult name=tc_02_Login_User_with_correct_email_and_password status=SUCCESS method=AutomationEx...)</span>
+                <span class="method-start">517597 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setup(public void regression.DemoGuruTestCases.tc_03_Reservation())</span>
-                <span class="method-start">16868 ms</span>
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_03_Login_User_with_incorrect_email_and_passwor...)</span>
+                <span class="method-start">517986 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">tc_03_Reservation</span>
-                <span class="method-start">21328 ms</span>
+                <span class="method-name">tc_03_Login_User_with_incorrect_email_and_password</span>
+                <span class="method-start">602188 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=tc_03_Reservation status=SUCCESS method=DemoGuruTestCases.tc_03_Reservation()[pri:3...)</span>
-                <span class="method-start">23389 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name=tc_03_Login_User_with_incorrect_email_and_password status=SUCCESS method=Automation...)</span>
+                <span class="method-start">795451 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_04_Logout_User())</span>
+                <span class="method-start">795745 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc_04_Logout_User</span>
+                <span class="method-start">802397 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name={null} status=CREATED method=AutomationExerciseTestCases.tc_04_Logout_User()[pri:4,...)</span>
+                <span class="method-start">802399 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_05_Register_User_with_existing_email())</span>
+                <span class="method-start">802669 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name={null} status=CREATED method=AutomationExerciseTestCases.tc_05_Register_User_with_e...)</span>
+                <span class="method-start">805622 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">tc_05_Register_User_with_existing_email</span>
+                <span class="method-start">805622 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_10_Verify_Subscription_in_Home_Page())</span>
+                <span class="method-start">805756 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc_10_Verify_Subscription_in_Home_Page</span>
+                <span class="method-start">819565 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name={null} status=CREATED method=AutomationExerciseTestCases.tc_10_Verify_Subscription_...)</span>
+                <span class="method-start">819566 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_11_Verify_Subscription_in_Cart_Page())</span>
+                <span class="method-start">819801 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc_11_Verify_Subscription_in_Cart_Page</span>
+                <span class="method-start">822169 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name={null} status=CREATED method=AutomationExerciseTestCases.tc_11_Verify_Subscription_...)</span>
+                <span class="method-start">822170 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scr...)</span>
+                <span class="method-start">822333 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality</span>
+                <span class="method-start">834847 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name={null} status=CREATED method=AutomationExerciseTestCases.tc_25_Verify_Scroll_Up_usi...)</span>
+                <span class="method-start">834849 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void regression.AutomationExerciseTestCases.tc_26_Verify_Scroll_Up_without_Arrow_button_and_S...)</span>
+                <span class="method-start">835021 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality</span>
+                <span class="method-start">837071 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name={null} status=CREATED method=AutomationExerciseTestCases.tc_26_Verify_Scroll_Up_wit...)</span>
+                <span class="method-start">837071 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">23769 ms</span>
+                <span class="method-start">837345 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

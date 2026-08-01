@@ -1,3 +1,5 @@
-demo\SauceDemoLoginTestWithScreenShot.class
-regression\DemoGuruTestCases.class
+regression\LoginTest.class
 demo\ExtentManager.class
+demo\SauceDemoLoginTestWithScreenShot.class
+regression\RegisterTest.class
+regression\AutomationExerciseTestCases.class

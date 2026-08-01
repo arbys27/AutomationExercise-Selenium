@@ -1,6 +1,5 @@
 package base;
 
-import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
@@ -9,6 +8,8 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Random;
 import org.openqa.selenium.WebElement;
@@ -50,8 +51,22 @@ import utils.ElementFetch;
 		public static ExtentReports extent;
 		public static ExtentTest logger;
 		ElementFetch ele = new ElementFetch();
+
+		protected String resolveBrowserName(String browser) {
+			if (browser == null) {
+				return "chrome";
+			}
+
+			browser = browser.trim();
+			if (browser.isEmpty() || browser.contains("${")) {
+				return "chrome";
+			}
+
+			return browser.toLowerCase();
+		}
 		
 	public void beforeTestMethod(String browser) {
+			browser = resolveBrowserName(browser);
 		String reportname = "REGRESSION_" + browser.toUpperCase();
 		reportname = reportname.replace("-HEADLESS", "");
 		String reportPath = System.getProperty("user.dir") + File.separator + "Reports" + File.separator + reportname + File.separator + reportname + "_TESTING.html";
@@ -142,8 +157,21 @@ import utils.ElementFetch;
 		switch(browser) {
 		case "chrome":
 			ChromeOptions options = new ChromeOptions();
+			Map<String, Object> chromePreferences = new HashMap<>();
+			chromePreferences.put("credentials_enable_service", false);
+			chromePreferences.put("profile.password_manager_enabled", false);
+			chromePreferences.put("autofill.profile_enabled", false);
+			chromePreferences.put("autofill.credit_card_enabled", false);
+			chromePreferences.put("autofill.address_enabled", false);
+			chromePreferences.put("autofill.wallet_enabled", false);
+			chromePreferences.put("profile.default_content_setting_values.notifications", 2);
+			chromePreferences.put("profile.default_content_setting_values.popups", 2);
+			options.setExperimentalOption("prefs", chromePreferences);
 			options.addArguments("window-size=1980x1080");
 			options.addArguments("--window-position=-2400,-2400");
+			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-popup-blocking");
+			options.addArguments("--disable-save-password-bubble");
 			options.addArguments("--disable-gpu"); 
 	        options.addArguments("--no-sandbox"); 
 	        options.addArguments("--disable-dev-shm-usage"); 
@@ -167,9 +195,22 @@ import utils.ElementFetch;
 			
 		case "chrome-headless":
 			options = new ChromeOptions();
+			chromePreferences = new HashMap<>();
+			chromePreferences.put("credentials_enable_service", false);
+			chromePreferences.put("profile.password_manager_enabled", false);
+			chromePreferences.put("autofill.profile_enabled", false);
+			chromePreferences.put("autofill.credit_card_enabled", false);
+			chromePreferences.put("autofill.address_enabled", false);
+			chromePreferences.put("autofill.wallet_enabled", false);
+			chromePreferences.put("profile.default_content_setting_values.notifications", 2);
+			chromePreferences.put("profile.default_content_setting_values.popups", 2);
+			options.setExperimentalOption("prefs", chromePreferences);
 			options.addArguments("headless");
 			options.addArguments("window-size=1980x1080");
 			options.addArguments("--window-position=-2400,-2400");
+			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-popup-blocking");
+			options.addArguments("--disable-save-password-bubble");
 			options.addArguments("--disable-gpu"); 
 	        options.addArguments("--no-sandbox"); 
 	        options.addArguments("--disable-dev-shm-usage"); 
@@ -240,6 +281,7 @@ import utils.ElementFetch;
 	
 	@Parameters({"browser"})
 	public void initializeBrowser(String browser, Method testMethod) {
+		browser = resolveBrowserName(browser);
 		logger = extent.createTest(testMethod.getName());
 		setupDriver(browser);
 	    driver.manage().window().maximize();
@@ -247,7 +289,6 @@ import utils.ElementFetch;
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	    logger.info("URL: "+Constants.url);
 	}
-
 
 	public void click(String webElement) {
 	  

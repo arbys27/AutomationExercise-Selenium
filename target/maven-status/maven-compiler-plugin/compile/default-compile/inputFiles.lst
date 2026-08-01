@@ -1,11 +1,11 @@
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\base\BaseTest.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\utils\SuiteListener.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\pageEvents\loginPageEvents.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\utils\RetryAnalyzer.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\pageObjects\registerPageElements.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\pageEvents\flightPageEvents.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\utils\Constants.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\pageEvents\registerPageEvents.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\utils\ElementFetch.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\pageObjects\loginPageElements.java
-C:\Users\Edmundo Dela Cruz\git\staProject\selenium-demo\src\main\java\pageObjects\flightPageElements.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\pageEvents\homePageEvents.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\pageEvents\registerPageEvents.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\utils\ElementFetch.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\pageEvents\loginPageEvents.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\pageObjects\HomePage.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\utils\Constants.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\utils\RetryAnalyzer.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\pageObjects\LoginPage.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\utils\SuiteListener.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\pageObjects\RegisterPage.java
+C:\Users\ryzen 5\Documents\SystemTesting\STAAutomationDemo\src\main\java\base\BaseTest.java

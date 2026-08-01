@@ -1,11 +1,11 @@
 base\BaseTest.class
-pageObjects\flightPageElements.class
-pageObjects\loginPageElements.class
+pageEvents\homePageEvents.class
 pageEvents\registerPageEvents.class
 utils\Constants.class
-pageEvents\flightPageEvents.class
+pageObjects\RegisterPage.class
+pageObjects\LoginPage.class
 utils\ElementFetch.class
 utils\RetryAnalyzer.class
+pageObjects\HomePage.class
 pageEvents\loginPageEvents.class
-pageObjects\registerPageElements.class
 utils\SuiteListener.class

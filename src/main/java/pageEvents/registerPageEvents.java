@@ -3,66 +3,93 @@ package pageEvents;
 import java.util.Dictionary;
 
 import base.BaseTest;
-import pageObjects.registerPageElements;
+import pageObjects.HomePage;
+import pageObjects.LoginPage;
+import pageObjects.RegisterPage;
 
-public class registerPageEvents extends BaseTest{
+public class registerPageEvents extends BaseTest {
 
-    loginPageEvents loginPage = new loginPageEvents();
+	public void completeRegistration(Dictionary<String, String> userDetails) {
+		logger.info("Fill up account information");
+		click(RegisterPage.radMr);
 
-    public void register(@SuppressWarnings("rawtypes") Dictionary registerDetails){
+		clear(RegisterPage.txtPassword);
+		sendKeys(RegisterPage.txtPassword, userDetails.get("password").toString());
 
-        //Click Registration tab
-        loginPage.clickRegisterTab();
-        
-        //Fill Up Contact Information
-        logger.info("Fill Up Contact Information");
-        clear(registerPageElements.txtFirstName);
-        sendKeys(registerPageElements.txtFirstName, registerDetails.get("firstName").toString());
+		selectElementByVisibleText(RegisterPage.slcDays, userDetails.get("day").toString());
+		selectElementByVisibleText(RegisterPage.slcMonths, userDetails.get("month").toString());
+		selectElementByVisibleText(RegisterPage.slcYears, userDetails.get("year").toString());
 
-        clear(registerPageElements.txtLastName);
-        sendKeys(registerPageElements.txtLastName, registerDetails.get("lastName").toString());
+		click(RegisterPage.chkNewsletter);
+		click(RegisterPage.chkOptin);
 
-        clear(registerPageElements.txtPhone);
-        sendKeys(registerPageElements.txtPhone, registerDetails.get("phone").toString());
+		logger.info("Fill up address information");
+		clear(RegisterPage.txtFirstName);
+		sendKeys(RegisterPage.txtFirstName, userDetails.get("firstName").toString());
 
-        clear(registerPageElements.txtEmail);
-        sendKeys(registerPageElements.txtEmail, registerDetails.get("email").toString());
+		clear(RegisterPage.txtLastName);
+		sendKeys(RegisterPage.txtLastName, userDetails.get("lastName").toString());
 
-        //Mailing Information
-        logger.info("Fill Up Mailing Information");
-        clear(registerPageElements.txtAddress);
-        sendKeys(registerPageElements.txtAddress, registerDetails.get("address").toString());
+		clear(RegisterPage.txtCompany);
+		sendKeys(RegisterPage.txtCompany, userDetails.get("company").toString());
 
-        clear(registerPageElements.txtCity);
-        sendKeys(registerPageElements.txtCity, registerDetails.get("city").toString());
+		clear(RegisterPage.txtAddress1);
+		sendKeys(RegisterPage.txtAddress1, userDetails.get("address1").toString());
 
-        clear(registerPageElements.txtStateProvince);
-        sendKeys(registerPageElements.txtStateProvince, registerDetails.get("state").toString());
+		clear(RegisterPage.txtAddress2);
+		sendKeys(RegisterPage.txtAddress2, userDetails.get("address2").toString());
 
-        clear(registerPageElements.txtPostalCode);
-        sendKeys(registerPageElements.txtPostalCode, registerDetails.get("postalCode").toString());
+		selectElementByVisibleText(RegisterPage.slcCountry, userDetails.get("country").toString());
 
-        //User Information
-        logger.info("Fill Up User Information");
-        clear(registerPageElements.txtUsername);
-        sendKeys(registerPageElements.txtUsername, registerDetails.get("userName").toString());
+		clear(RegisterPage.txtState);
+		sendKeys(RegisterPage.txtState, userDetails.get("state").toString());
 
-        clear(registerPageElements.txtPassword);
-        sendKeys(registerPageElements.txtPassword, registerDetails.get("password").toString());
+		clear(RegisterPage.txtCity);
+		sendKeys(RegisterPage.txtCity, userDetails.get("city").toString());
 
-        clear(registerPageElements.txtConfirmPassword);
-        sendKeys(registerPageElements.txtConfirmPassword, registerDetails.get("password").toString());
+		clear(RegisterPage.txtZipcode);
+		sendKeys(RegisterPage.txtZipcode, userDetails.get("zipcode").toString());
 
-        //Click Submit
-        logger.info("Click Submit button");
-        click(registerPageElements.btnSubmit);
+		clear(RegisterPage.txtMobileNumber);
+		sendKeys(RegisterPage.txtMobileNumber, userDetails.get("mobileNumber").toString());
 
-    }
+		click(RegisterPage.btnCreateAccount);
+	}
 
-    public void validateUserRegister(@SuppressWarnings("rawtypes") Dictionary registerDetails){
-        
-        String userNameLocator = "//b[normalize-space()='Note: Your user name is "+registerDetails.get("userName")+".']";
-        assertElementIsDisplayed(userNameLocator);
-    }
-    
+	public void validateAccountCreated() {
+		logger.info("Validate account created screen");
+		assertElementIsDisplayed(HomePage.hdrAccountCreated);
+	}
+
+	public void continueToHome() {
+		logger.info("Continue to home page");
+		click(HomePage.btnContinue);
+	}
+
+	public void deleteAccount() {
+		logger.info("Delete created account");
+		click(HomePage.linkDeleteAccount);
+	}
+
+	public void validateAccountDeleted() {
+		logger.info("Validate account deleted screen");
+		assertElementIsDisplayed(HomePage.hdrAccountDeleted);
+	}
+
+	public void startSignup(Dictionary<String, String> userDetails) {
+		logger.info("Fill up signup name and email");
+		clear(LoginPage.txtSignupName);
+		sendKeys(LoginPage.txtSignupName, userDetails.get("name").toString());
+
+		clear(LoginPage.txtSignupEmail);
+		sendKeys(LoginPage.txtSignupEmail, userDetails.get("email").toString());
+
+		click(LoginPage.btnSignup);
+	}
+
+	public void validateRegistrationSuccess() {
+		logger.info("Validate registration success banner");
+		assertElementIsDisplayed(HomePage.hdrAccountCreated);
+	}
+
 }
