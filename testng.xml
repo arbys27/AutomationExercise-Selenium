@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <listeners>
-    <listener class-name="utils.SuiteListener" />
-  </listeners>
-  <parameter name="browser" value="${browser}"/>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="regression.AutomationExerciseTestCases"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+
+<suite name="Automation Exercise Suite">
+
+    <listeners>
+        <listener class-name="utils.SuiteListener"/>
+    </listeners>
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Regression Tests">
+
+        <classes>
+
+            <!-- TC1 - TC5, TC8-TC13, TC17-TC20, TC22, TC25, TC26 -->
+            <class name="regression.AutomationExerciseTestCases"/>
+
+            <!-- TC6-TC7 -->
+            <class name="regression.ContactTest"/>
+
+            <!-- TC14-TC16, TC23-TC24 -->
+            <class name="regression.CheckoutTest"/>
+
+            <!-- TC21 -->
+            <class name="regression.ReviewTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>

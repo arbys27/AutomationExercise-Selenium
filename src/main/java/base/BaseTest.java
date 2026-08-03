@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Random;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
 
 import org.apache.commons.io.FileUtils;
@@ -153,83 +154,53 @@ import utils.ElementFetch;
 		extent.flush();
 	}
 
+	private ChromeOptions buildChromeOptions(boolean headless) {
+		ChromeOptions options = new ChromeOptions();
+		Map<String, Object> chromePreferences = new HashMap<>();
+		chromePreferences.put("credentials_enable_service", false);
+		chromePreferences.put("profile.password_manager_enabled", false);
+		chromePreferences.put("autofill.profile_enabled", false);
+		chromePreferences.put("autofill.credit_card_enabled", false);
+		chromePreferences.put("autofill.address_enabled", false);
+		chromePreferences.put("autofill.wallet_enabled", false);
+		chromePreferences.put("profile.default_content_settings.images", 2);
+		chromePreferences.put("profile.default_content_settings.notifications", 2);
+		chromePreferences.put("profile.default_content_settings.popups", 2);
+		chromePreferences.put("profile.default_content_settings.geolocation", 2);
+		options.setExperimentalOption("prefs", chromePreferences);
+		options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+		if (headless) {
+			options.addArguments("headless");
+		}
+		options.addArguments("window-size=1980x1080");
+		options.addArguments("--window-position=-2400,-2400");
+		options.addArguments("--disable-notifications");
+		options.addArguments("--disable-popup-blocking");
+		options.addArguments("--disable-save-password-bubble");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--disable-background-networking");
+		options.addArguments("--disable-background-timer-throttling");
+		options.addArguments("--disable-renderer-backgrounding");
+		options.addArguments("--disable-extensions");
+		options.addArguments("--lang=en");
+		options.addArguments("--disable-web-security");
+		options.addArguments("--allow-running-insecure-content");
+		options.setCapability("acceptInsecureCerts", true);
+		return options;
+	}
+
 	public void setupDriver(String browser) {
 		switch(browser) {
 		case "chrome":
-			ChromeOptions options = new ChromeOptions();
-			Map<String, Object> chromePreferences = new HashMap<>();
-			chromePreferences.put("credentials_enable_service", false);
-			chromePreferences.put("profile.password_manager_enabled", false);
-			chromePreferences.put("autofill.profile_enabled", false);
-			chromePreferences.put("autofill.credit_card_enabled", false);
-			chromePreferences.put("autofill.address_enabled", false);
-			chromePreferences.put("autofill.wallet_enabled", false);
-			chromePreferences.put("profile.default_content_setting_values.notifications", 2);
-			chromePreferences.put("profile.default_content_setting_values.popups", 2);
-			options.setExperimentalOption("prefs", chromePreferences);
-			options.addArguments("window-size=1980x1080");
-			options.addArguments("--window-position=-2400,-2400");
-			options.addArguments("--disable-notifications");
-			options.addArguments("--disable-popup-blocking");
-			options.addArguments("--disable-save-password-bubble");
-			options.addArguments("--disable-gpu"); 
-	        options.addArguments("--no-sandbox"); 
-	        options.addArguments("--disable-dev-shm-usage"); 
-	        options.addArguments("-disable-site-isolation-trials");
-	        options.addArguments("--lang=en");
-	        options.addArguments("--disable-web-security");
-	        options.addArguments("--allow-running-insecure-content");
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("disable-infobars");
-	        options.addArguments("--disable-extensions");
-	        options.addArguments("--lang=en");
-	        options.addArguments("--disable-web-security");
-	        options.addArguments("--allow-running-insecure-content");
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("disable-infobars");
-	        options.addArguments("--disable-extensions");
-	        options.setCapability("acceptInsecureCerts",true);
 			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver(options);
+			driver = new ChromeDriver(buildChromeOptions(false));
 			break;
 			
 		case "chrome-headless":
-			options = new ChromeOptions();
-			chromePreferences = new HashMap<>();
-			chromePreferences.put("credentials_enable_service", false);
-			chromePreferences.put("profile.password_manager_enabled", false);
-			chromePreferences.put("autofill.profile_enabled", false);
-			chromePreferences.put("autofill.credit_card_enabled", false);
-			chromePreferences.put("autofill.address_enabled", false);
-			chromePreferences.put("autofill.wallet_enabled", false);
-			chromePreferences.put("profile.default_content_setting_values.notifications", 2);
-			chromePreferences.put("profile.default_content_setting_values.popups", 2);
-			options.setExperimentalOption("prefs", chromePreferences);
-			options.addArguments("headless");
-			options.addArguments("window-size=1980x1080");
-			options.addArguments("--window-position=-2400,-2400");
-			options.addArguments("--disable-notifications");
-			options.addArguments("--disable-popup-blocking");
-			options.addArguments("--disable-save-password-bubble");
-			options.addArguments("--disable-gpu"); 
-	        options.addArguments("--no-sandbox"); 
-	        options.addArguments("--disable-dev-shm-usage"); 
-	        options.addArguments("-disable-site-isolation-trials");
-	        options.addArguments("--lang=en");
-	        options.addArguments("--disable-web-security");
-	        options.addArguments("--allow-running-insecure-content");
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("disable-infobars");
-	        options.addArguments("--disable-extensions");
-	        options.addArguments("--lang=en");
-	        options.addArguments("--disable-web-security");
-	        options.addArguments("--allow-running-insecure-content");
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("disable-infobars");
-	        options.addArguments("--disable-extensions");
-	        options.setCapability("acceptInsecureCerts",true);
 			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver(options);
+			driver = new ChromeDriver(buildChromeOptions(true));
 			break;
 			
 		case "firefox":
@@ -285,15 +256,16 @@ import utils.ElementFetch;
 		logger = extent.createTest(testMethod.getName());
 		setupDriver(browser);
 	    driver.manage().window().maximize();
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
 	    driver.get(Constants.url);
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	    logger.info("URL: "+Constants.url);
 	}
 
 	public void click(String webElement) {
 	  
 	try {
-		ele.getXPATHWebElement(webElement).click();
+		WebElement element = ele.getXPATHWebElement(webElement);
+		element.click();
 	}catch (Exception e) {
 		WebElement element = driver.findElement(By.xpath(webElement));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
@@ -303,14 +275,16 @@ import utils.ElementFetch;
 	}
 	
 	public void sendKeys(String webElement, String keysToSend) {
-		ele.getXPATHWebElement(webElement).sendKeys(keysToSend);
+		WebElement element = ele.getXPATHWebElement(webElement);
+		element.clear();
+		element.sendKeys(keysToSend);
 		
 	}
 	
     public void clear(String webElement) {
     	
-    	ele.getXPATHWebElement(webElement).sendKeys(Keys.CONTROL, "a");
-    	ele.getXPATHWebElement(webElement).sendKeys(Keys.chord(Keys.DELETE));
+		WebElement element = ele.getXPATHWebElement(webElement);
+		element.clear();
     }
     
     public int generate4Digit() {
@@ -322,15 +296,15 @@ import utils.ElementFetch;
     
     public void assertElementIsDisplayed(String webElement) {
         try {
-            // Locate the element
-            WebElement element = driver.findElement(By.xpath(webElement));
+            // Locate the element using the shared explicit wait utility
+            WebElement element = ele.getXPATHWebElement(webElement);
 
             // Scroll to the element using JavaScript
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", element);
 
             // Use explicit wait to ensure the element is visible after scrolling
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             wait.until(ExpectedConditions.visibilityOf(element));
 
             // Assert that the element is displayed

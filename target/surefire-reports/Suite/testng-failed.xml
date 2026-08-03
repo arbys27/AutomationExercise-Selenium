@@ -9,16 +9,17 @@
     <classes>
       <class name="regression.AutomationExerciseTestCases">
         <methods>
-          <include name="tc_25_Verify_Scroll_Up_using_Arrow_button_and_Scroll_Down_functionality"/>
           <include name="tc_11_Verify_Subscription_in_Cart_Page"/>
           <include name="afterTest"/>
           <include name="setup"/>
           <include name="afterMethod"/>
           <include name="tc_10_Verify_Subscription_in_Home_Page"/>
+          <include name="tc_03_Login_User_with_incorrect_email_and_password"/>
           <include name="tc_04_Logout_User"/>
-          <include name="prepareReport"/>
+          <include name="tc_01_Register_User"/>
+          <include name="tc_02_Login_User_with_correct_email_and_password"/>
           <include name="tc_05_Register_User_with_existing_email"/>
-          <include name="tc_26_Verify_Scroll_Up_without_Arrow_button_and_Scroll_Down_functionality"/>
+          <include name="prepareReport"/>
         </methods>
       </class> <!-- regression.AutomationExerciseTestCases -->
     </classes>
